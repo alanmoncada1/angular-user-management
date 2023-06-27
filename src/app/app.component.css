@@ -1,0 +1,20 @@
+.text-list {
+    font-size: large;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.text-title {
+    font-stretch: expanded;
+}
+
+.list {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.list-item {
+    padding: 8px;
+    
+}
