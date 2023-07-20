@@ -1,0 +1,7 @@
+<ul class="p-2 list-none space-y-2">
+    <li class="flex items-center justify-center" *ngFor="let item of items">
+        <app-person-item [person]="item" 
+            (onEditPerson)="onEditItem($event)"
+            (onDestroyPerson)="onDestroyItem($event)"></app-person-item>
+    </li>
+</ul>

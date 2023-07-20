@@ -1,10 +1,16 @@
-<div class="text-list">
-  <h2 class="text-title">Persons:</h2>
+<div class="text-center">
+  <h2 class="font-bold text-4xl text-gray-800">Persons:</h2>
 
-  <ul class="list">
-    <li class="list-item" *ngFor="let person of persons">{{ person.name }}</li>
-  </ul>
+  <app-item-list [items]="persons"></app-item-list>
 
-  <input [(ngModel)]="person.name" placeholder="Ex. Addam Wells"/>
-  <button (click)="onSavePerson()">Add Person</button>
+  <div class="p-4 inline-flex space-x-3">
+    
+    <input type="text" class="rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-2 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-lg sm:leading-6"
+      [(ngModel)]="person.name" placeholder="Ex. Addam Wells" />
+    <button class="bg-teal-700 rounded-md p-2 text-gray-100 disabled:bg-slate-400" [disabled]="!person.name" (click)="onSavePerson()">Add Person</button>
+  
+  </div>
+
+  <!-- TODO: Finish the modal component to edit and alert -->
+  <app-modal description="Description" title="title"></app-modal>
 </div>

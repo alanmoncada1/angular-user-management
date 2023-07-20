@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   
   persons: PersonInterface[] = [];
 
-  person: PersonInterface = { name: "" };
+  person: PersonInterface = { name: null };
 
   async ngOnInit() {
       // Using promises
@@ -29,5 +29,10 @@ export class AppComponent implements OnInit {
     this.person = {} as PersonInterface;
   }
 
+  onDestroyPerson(person: PersonInterface): void {
+    this.persons.splice(this.persons.indexOf(person), 1, this.person);
+  }
+
+  onEditPerson(person: PersonInterface): void {}
  
 }

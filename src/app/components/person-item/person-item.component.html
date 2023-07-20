@@ -1,0 +1,11 @@
+<div class="text-xl font-medium inline-flex items-center justify-between">
+    <span class="text-gray-800 mr-2">{{ person.name }}</span>
+
+    <!-- Deleting person -->
+    <mat-icon class="text-red-800 cursor-pointer hover:text-red-400" (click)="destroyPerson(person)"
+        aria-hidden="false" aria-label="Home Icon" fontIcon="close"></mat-icon>
+
+    <!-- Editing person -->
+    <mat-icon class="text-cyan-700 cursor-pointer hover:text-cyan-600" (click)="editPerson(person)"
+        aria-hidden="false" aria-label="Home Icon" fontIcon="edit"></mat-icon>
+</div>
