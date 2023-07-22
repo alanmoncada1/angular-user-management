@@ -7,7 +7,7 @@ import { PersonInterface } from 'src/interface';
   styleUrls: ['./person-item.component.css']
 })
 
-// TODO: coNTINUE WITH THE MODAL IMPL
+// TODO: CONNTINUE WITH THE MODAL IMPL
 export class PersonItemComponent {
 
   @Input() person: PersonInterface = {} as PersonInterface;
