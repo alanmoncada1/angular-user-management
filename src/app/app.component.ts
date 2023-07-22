@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
   constructor(private personsService: PersonsService) {}
   
   persons: PersonInterface[] = [];
-
   person: PersonInterface = { name: null };
+  showModal = false;
 
   async ngOnInit() {
       // Using promises
@@ -34,5 +34,13 @@ export class AppComponent implements OnInit {
   }
 
   onEditPerson(person: PersonInterface): void {}
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
+  }
  
 }

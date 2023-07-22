@@ -6,16 +6,20 @@ import { PersonInterface } from 'src/interface';
   templateUrl: './person-item.component.html',
   styleUrls: ['./person-item.component.css']
 })
+
+// TODO: coNTINUE WITH THE MODAL IMPL
 export class PersonItemComponent {
 
   @Input() person: PersonInterface = {} as PersonInterface;
 
   @Output() onDestroyPerson = new EventEmitter<PersonInterface>();
-  @Output() onEditPerson = new EventEmitter<PersonInterface>();
+  @Output() onEditPerson = new EventEmitter<any>();
 
   destroyPerson(person: PersonInterface): void {
     this.onDestroyPerson.emit(this.person);
   }
 
-  editPerson(person: PersonInterface): void {}
+  editPerson(): void {
+    this.onEditPerson.emit();
+  }
 }

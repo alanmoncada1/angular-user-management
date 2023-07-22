@@ -1,7 +1,8 @@
-<div class="text-center mt-3 sm:mt-0 sm:ml-4 sm:text-left">
-    <h3 class="text-lg font-medium text-gray-900">{{modal.title}}</h3>
-
-    <div class="modal-text mt-2">
-        <p class="text-gray-500 text-sm">{{modal.description}}</p>
+<div class="absolute inset-0 flex items-center justify-center z-50">
+  <div class="w-60 p-8 bg-white rounded-lg shadow-xl">
+    <div class="modal-content">
+      <!-- Modal content here -->
+      <ng-content></ng-content>
     </div>
+  </div>
 </div>

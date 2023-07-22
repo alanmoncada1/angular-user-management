@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { PersonInterface } from 'src/interface';
 
 @Component({
@@ -8,9 +8,8 @@ import { PersonInterface } from 'src/interface';
 })
 export class ItemListComponent {
 
-  
   @Input() items: PersonInterface[] = [] as PersonInterface[];
-
+  @Output() editItem = new EventEmitter<any>();
 
   onDestroyItem(item: PersonInterface): void {
     this.items.splice(this.items.indexOf(item), 1);

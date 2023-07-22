@@ -1,0 +1,11 @@
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-container {
+    max-width: 480px;
+  }
+  
+  .modal-content {
+    /* Add your custom styles for the modal content */
+  }
